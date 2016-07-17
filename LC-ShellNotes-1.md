@@ -15,7 +15,7 @@ Introduction to lesson resources:
 * Helpers Available
 
 Downloading data files for lesson:
-http://github.com/ucsdlib/libcarp-data-notes/shell-data
+http://github.com/ucsdlib/libcarp-data-notes/
 
 
 # Introduction
