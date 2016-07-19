@@ -75,3 +75,35 @@ tr [:upper:] [:lower:] < gulliver-noheadfootpunct.txt > gulliver-clean.txt > gul
 	* GPE South East Asia, Midlothian
 * We are using the Stanford NER <http://nlp.stanford.edu/software/CRF-NER.shtml> tool 
 
+```bash
+stanford-ner/ner.sh gulliver-noheadfootpunct.txt > gulliver_ner.txt
+```
+
+### break above down
+
+* calls ner.sh inside `stanford-ner/` on `gulliver-noheadfootpunct.txt` and redirects to `gulliver_ner.txt`
+* let's look at file - it annotates the file with /0 or some entity description
+* it will append a /PERSON, /ORGANIZATION or /LOCATION tag respectively. 
+
+```bash
+sed 's/\/O / /g' < gulliver_ner.txt > gulliver_ner-clean.txt`
+```
+
+* the sed command ‘s/before/after/g’ changes all instances of the before pattern to the after pattern
+* let's remove the /0 so we can better see and further analyze the file
+* The pattern that we are trying to match has a forward slash in it, so we have to precede that with a backslash to escape it.
+
+```bash
+egrep -o -f locpattr gulliver_ner-clean.txt | sed 's/\/LOCATION//g' | sort | uniq -c | sort -nr > gulliver_ner-loc-freq.txt
+```
+* egrep is a variant of grep for patterns ( extra regex) = same as running grep -E
+* we use the `-o` flag to print only the matches
+* `-f` reads the file `locpattr`
+*  we pull out the locations (can be multiple words adjacency sequence), send to sed to delete LOCATION, sort, do a uniq count, and sort in reverse by number order (not alpha)
+
+* challenge
+
+* recreate this pipe but use the personpattr file instead, examine the pattern, notice how it differs
+* what is the top occuring personal name?
+
+
