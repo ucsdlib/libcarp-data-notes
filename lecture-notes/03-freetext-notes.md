@@ -60,3 +60,18 @@ tr -d [:punct:] < gulliver-noheadfoot.txt > gulliver-noheadfootpunct.txt
 ```bash
 tr [:upper:] [:lower:] < gulliver-noheadfootpunct.txt > gulliver-clean.txt > gulliver-clean.txt
 ```
+
+## Named Entity Recognition 
+
+* Named entities are definite noun phrases that refer to specific types of individuals, such as organizations, persons, dates, and so on. 
+	* ORGANIZATION - Georgia-Pacific Corp., WHO
+	* PERSON - Eddy Bonte, President Obama
+	* LOCATION -Murray River, Mount Everest
+	* DATE June, 2008-06-29
+	* TIME two fifty a m, 1:30 p.m.
+	* MONEY 175 million Canadian Dollars, GBP 10.40
+	* PERCENT - twenty pct, 18.75 %
+	* FACILITY Washington Monument, Stonehenge
+	* GPE South East Asia, Midlothian
+* We are using the Stanford NER <http://nlp.stanford.edu/software/CRF-NER.shtml> tool 
+

@@ -1,3 +1,31 @@
+## Step back - Why use CLI for DATA SCIENCE?
+
+* CLI is agile
+	* DS is interactive and exploratory, and your envir needs to allow for this
+	* CLI provides read-eval-print-loop (REPL)
+		* type a command, press enter and cmd is evaluated immediately
+		* much more convienent for DS than edit-combile-run-debug cycle
+	* CLI is very close to file system
+		* b/c data is necessary for doing DS, importance for working with files
+* Cmd line is augmenting
+	* augmenting tech that amplifies existing technologies
+	* integrates with other tech (e.g. use with R & python)
+	* write scripts in python or r that work like a cli tool
+* Scalable - very diff. from using GUI
+	* everythung you type on cmd line can be automated
+	* reruning cmds are very easy
+	* can automate running commands on remotes
+	* scalable and repeatable
+	* not point and click
+* CLI extensible 
+	* agnostic
+	* cli tools written in many programming languages
+	* cli tools work together
+* CLI is ubiquitous 
+	* on unix based systems (linux, mac osx, android)
+	* 95% of the top 500 supercomputers are running linux
+	* cloud computing mostly linux, remote servers
+
 ## Mining 
 
 * Shell can do much more than count! 
