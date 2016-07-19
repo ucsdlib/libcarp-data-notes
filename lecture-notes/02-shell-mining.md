@@ -1,25 +1,26 @@
-## Step back - Why use CLI for DATA SCIENCE?
+## Step back - Why use CLI for DATA SCIENCE? (put in terminal showing comment)
 
 * CLI is agile
 	* DS is interactive and exploratory, and your envir needs to allow for this
 	* CLI provides read-eval-print-loop (REPL)
 		* type a command, press enter and cmd is evaluated immediately
-		* much more convienent for DS than edit-combile-run-debug cycle
+		* much more convienent for DS than edit-combine-run-debug cycle
+		* also more immediate than working in a point and click envir at scale
 	* CLI is very close to file system
 		* b/c data is necessary for doing DS, importance for working with files
 * Cmd line is augmenting
 	* augmenting tech that amplifies existing technologies
 	* integrates with other tech (e.g. use with R & python)
-	* write scripts in python or r that work like a cli tool
+	* write scripts in python or r that work like a cli tool (http://csvkit.readthedocs.io/en/latest/)
 * Scalable - very diff. from using GUI
-	* everythung you type on cmd line can be automated
-	* reruning cmds are very easy
+	* everything you type on cmd line can be automated
+	* rerunning cmds are very easy
 	* can automate running commands on remotes
 	* scalable and repeatable
 	* not point and click
 * CLI extensible 
 	* agnostic
-	* cli tools written in many programming languages
+	* cli tools written in many programming languages (python, R, node, perl, ruby)
 	* cli tools work together
 * CLI is ubiquitous 
 	* on unix based systems (linux, mac osx, android)
@@ -31,7 +32,7 @@
 * Shell can do much more than count! 
 * The `grep` (global regluar expression print) searches across multiple files for specific character strings
   * Faster than a GUI search 
-  * Combined with redirection `>` operator is a powerful data mining tool searching for patters across multiple files, subsetting into new derived files
+  * Combined with redirection `>` operator is a powerful data mining tool searching for patterns across multiple files, subsetting into new derived files
 * Esp. benefitial for working with large numbers of files
 
 **Start in the `data/` directory**
@@ -57,7 +58,7 @@ grep -c 1999 *.tsv
 ```
 
 * The shell outputs the number of times the string `1999` appeared in each *.tsv
-* the Year corresponds to the date field for each journal article in the file ( look at the file )
+* the Year in this instance corresponds to the date field for each journal article in the file ( look at the file )
 
 * Srings need not be numbers
 
@@ -96,7 +97,7 @@ grep -i revolution *.tsv > results/2016-07-19_JAi-revolution.txt
 
 * this saves the subsetted data to the file
 * however if we look at this file (look), it contains every instance of 'revolution' including as a single word or as part of other words such as 'revolutionary'
-* dependin on your objectives this is useful or not
+* depending on your objectives this is useful or not
 * `grep` provides the `w` flag so we can look for whole words - greater precision in our search
 
 ```bash
@@ -112,12 +113,12 @@ wc -l results/*.tsv
 
 **We can use the regular expression syntax covered earlier to search for similar words**
 
-* look at teh file `gallic.txt`
+* look at the file `gallic.txt`
 
 ```bash
 cat gallic.txt
 ```
-* it contains `fr[ae]nc[eh]`
+* it contains `fr[ae]nc[eh]` -- we learned this yesterday
 * the brackets here express the pattern of a character range
 * now we can use with `grep`
 
