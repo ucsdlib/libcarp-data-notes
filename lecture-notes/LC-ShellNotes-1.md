@@ -136,7 +136,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL 
 * Review each part in turn:
 
 #### First part:
-* #### grep 2009 2014-01_JA.tsv
+* grep 2009 2014-01_JA.tsv
 * grep is the command here. 
 * It tells the computer to search the spreadsheet 2014-01_JA.tsv for all the lines that contain the string 2009 and to store those in memory. 
 * The pipe then tells the machine to hold those in memory for the minute as we have something else we want to do.
@@ -159,7 +159,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | head -10
 
 
 #### Second part:
-* #### grep INTERNATIONAL 
+*  grep INTERNATIONAL 
 * The shell is case sensitive by default. 
 * This tells the computer to look for the capitalised string international on those lines that have 2009 in them.
 * Again it holds this subset in memory.
@@ -182,7 +182,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL 
 
 
 #### Third part:
-* ##### awk -F'\t' '{print $5}'
+* awk -F'\t' '{print $5}'
 * This command not be covered in detail for this class. 
 * Brief explanation, it identifies 2014-01_JA.tsv is a tab-separated spreadsheet and instructs the computer to print to the shell the 5th column which contains journal titles of all the lines we’ve queried down to (those with 2009 in them, and then those with INTERNATIONAL in them) and to hold that in memory.
 
@@ -214,7 +214,7 @@ grep 2009 ~/desktop/libcarp-data-notes/data/2014-01_JA.tsv | grep INTERNATIONAL 
 
 
 #### Fourth part:
-* ##### sort
+* sort
 * This command will sort that column.
 
 
@@ -287,7 +287,7 @@ grep 2009 ~/desktop/lc-data/libcarp-data-notes/shell-data/2014-02-01_JA-art.tsv 
 
 
 #### The fifth final command:
-* ##### uniq -c
+* uniq -c
 * final command will tell the comouter to remove duplicates but, as it is doing so, to count those duplicates and hold that data in memory.
 * As this is the last bit, the shell then - by default - prints the results to the shell, i.e. the number of articles published in 2009 in academic journals whose title contains the word ‘International’, with counts separated by journal.
 
@@ -339,7 +339,7 @@ Point out this string of shell commands is an example of how powerful the shell 
 
 
 
-* ##### Start by opening your shell.
+* Start by opening your shell.
 * MacOS open Terminal
 * Windows start Gitbash
 
