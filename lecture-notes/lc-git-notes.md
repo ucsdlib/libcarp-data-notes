@@ -6,38 +6,71 @@ Before Class
 * setup shell (plain Terminal)
 
 PreReqs
-* Git: everyone type ‘git’ in command line. Make sure you get a response that isn’t a variant of ‘unrecognized command'
-* Github: register for Github account if haven’t already. do it at the break, or if you need a mental break
+* Git: everyone type `git` in command line. Make sure you get a
+  response that isn’t a variant of ‘unrecognized command'; if you do,
+  install git (`brew install git`; <https://git-for-windows.github.io/>).
+
+* GitHub: [register](https://github.com/join) if haven’t already. do
+  it at the break, or if you need a mental break.
 
 _Switch to slides for Intro to Version Control_
 
 ## Intro to Version Control
-Use Slides https://docs.google.com/presentation/d/1_8zDM_eZMF-Nkjvz35_gBAifJaoB_of54Q9CsbulPSc/edit?usp=sharing
+Use Slides <https://docs.google.com/presentation/d/1_8zDM_eZMF-Nkjvz35_gBAifJaoB_of54Q9CsbulPSc/>
 
 ## Setting Up Git
-*Objectives: get system set up for proper attribution of your work*
 
-* open shell (git bash, terminal) to your home folder `cd ~`
-* verify `pwd`
-* specify your name, this will be recorded in your commit history. So we know who did what
-* `git config --global user.name “<username>"`
-* specify email, also recorded in commits
-* `git config --global user.email “<email address>"`
-* email address tagged in commits. If concerned
-  https://help.github.com/articles/keeping-your-email-address-private/
-* Text Editor, used when committing if a message is not supplied on the command line. we’ll discuss more
-* `git config --global core.editor "nano -w"`
-* `git config --global core.editor “vim"`
-* line endings. remember that conversation we had about how the wc command knows there’s a line ending? Well, different operating systems do this different, and it matters in git too. https://help.github.com/articles/dealing-with-line-endings/#global-settings-for-line-endings
-    - mac/linux: `git config --global core.autocrlf input`
-    - windows: `git config --global core.autocrlf true`
-* `--global` means will apply for every command entered afterward. The majority of the time, you’ll use this. You’ll want the same text editor, and generally the same other config settings. Different user accounts example (work vs home)
-* let’s check our settings (please do the same) `git config –-list`
-* **CHECK IN** Who has everything set?
-* Reminder: All the commands will be logged on the class **etherpad** as well.
-* While I will try and go slow, if you get lost, `git help` and `git help <command>` is your friend.
-* Discuss usage (`git status` every time something changes) it’s a very good habit to get into.
-* _QUESTIONS?_
+Objectives: get system set up for proper attribution of your work
+
+1. Configure your name and email address.  These are recorded in your
+   commit history, so we know who did what.  (It is possible to [keep
+   your email address private](https://help.github.com/articles/setting-your-commit-email-address-on-github/).)
+
+
+   ```shell
+   # list the current configuration settings for git
+   git config --list
+
+   # configure your user name
+   git config --global user.name “<username>"
+
+   # configure your user email
+   git config --global user.email “<email address>"
+   ```
+
+2. Configure the default text editor git uses (for example, when
+   prompting for a commit message).
+
+   ```shell
+   # for example,
+   git config --global core.editor "nano -w"
+   # or
+   git config --global core.editor "vim"
+   ```
+
+3. Line endings.  Remember that conversation we had about how the wc
+   command knows there’s a line ending? Well, different operating
+   systems do this different, and it matters in
+   git:
+   <https://help.github.com/articles/dealing-with-line-endings/#global-settings-for-line-endings>
+    - macOS/Linux: `git config --global core.autocrlf input`
+    - Windows: `git config --global core.autocrlf true`
+
+`--global` means will apply for every command entered afterward. The
+majority of the time, you’ll use this. You’ll want the same text
+editor, and generally the same other config settings.
+
+**CHECK IN** Who has everything set?
+
+Reminder: All the commands will be logged on the class **etherpad** as well.
+
+While I will try and go slow, if you get lost, `git help` and `git
+help <command>` is your friend.
+
+Discuss usage (`git status` every time something changes) it’s a very
+good habit to get into.
+
+**QUESTIONS?**
 
 ## Creating a Repository
 Objectives: start tracking versions in a particular folder/directory (repository)
